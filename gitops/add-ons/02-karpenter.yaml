@@ -28,7 +28,7 @@ spec:
       create: true
       name: karpenter # SA created via eksctl or
       annotations:
-        eks.amazonaws.com/role-arn:  arn:aws:iam::137512646041:instance-profile/KarpenterNodeInstanceProfile-eks-upgrades-workshop # Replace
+        eks.amazonaws.com/role-arn:  arn:aws:iam::137512646041:role/KarpenterNodeRole-eks-upgrades-workshop  # Replace
     settings:
       aws:
         clusterName: eks-upgrades-workshop
