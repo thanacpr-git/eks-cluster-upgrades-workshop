@@ -19,7 +19,7 @@ metadata:
   name: full-permissions-service-account
   namespace: argo-workflows
   annotations:
-    eks.amazonaws.com/role-arn: arn:aws:iam::666999343393:role/KarpenterNodeRole-eks-upgrades-workshop
+    eks.amazonaws.com/role-arn: arn:aws:iam::666999343393:instance-profile/KarpenterNodeInstanceProfile-eks-upgrades-workshop
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
@@ -59,7 +59,7 @@ spec:
     useStaticCredentials: false
     artifactRepository:
       s3:
-        bucket: my-tf-test-bucket-b14973ab-e916-b377-544d-e2aa7fcb116d
+        bucket: my-tf-test-bucket-a68fd7e4-4c1b-7ba4-eecc-ebe169454034
         region: us-east-1
         endpoint: s3.amazonaws.com
     workflow:
@@ -67,7 +67,7 @@ spec:
         create: true
         name: "argo-workflow"
         annotations:
-          eks.amazonaws.com/role-arn: arn:aws:iam::137512646041:instance-profile/KarpenterNodeInstanceProfile-eks-upgrades-workshop  # Add IRSA for EKS add-on validate
+          eks.amazonaws.com/role-arn: arn:aws:iam::666999343393:instance-profile/KarpenterNodeInstanceProfile-eks-upgrades-workshop  # Add IRSA for EKS add-on validate
       rbac:
         create: true
     controller:
@@ -77,7 +77,7 @@ spec:
       serviceType: LoadBalancer
       serviceAccount:
         annotations: 
-        eks.amazonaws.com/role-arn: arn:aws:iam::137512646041:instance-profile/KarpenterNodeInstanceProfile-eks-upgrades-workshop
+        eks.amazonaws.com/role-arn: arn:aws:iam::666999343393:instance-profile/KarpenterNodeInstanceProfile-eks-upgrades-workshop
       extraArgs:
       - --auth-mode=server # This is for demonstration purposes only
   install: {}
