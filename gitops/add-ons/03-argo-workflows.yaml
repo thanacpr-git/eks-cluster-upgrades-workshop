@@ -19,7 +19,7 @@ metadata:
   name: full-permissions-service-account
   namespace: argo-workflows
   annotations:
-    eks.amazonaws.com/role-arn: 
+    eks.amazonaws.com/role-arn: arn:aws:iam::666999343393:role/KarpenterNodeRole-eks-upgrades-workshop
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding

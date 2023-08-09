@@ -16,7 +16,7 @@ spec:
           - name: CLUSTER_IAM_ROLE_NAME
             value: eks-upgrades-workshop-cluster-20230712070437132400000001
           - name: CLUSTER_SG_ID
-            value: 
+            value: sg-0ef295ee48f93c661
       container:
         image: public.ecr.aws/i9m4f0j6/eks-validate-image:9
         command: ["/bin/sh","-c"]
