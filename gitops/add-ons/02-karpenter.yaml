@@ -33,7 +33,7 @@ spec:
       aws:
         clusterName: eks-upgrades-workshop
         clusterEndpoint:  https://6AEA045F90D89A1527B5E28B90D72504.gr7.us-east-1.eks.amazonaws.com # Replace
-        defaultInstanceProfile: KarpenterNodeInstanceProfile-eks-upgrades-workshop # Replace
+        defaultInstanceProfile: karpenter-20230809074823527000000002 # Replace
         # interruptionQueueName: eks-upgrade-demo
   install: {}
  
